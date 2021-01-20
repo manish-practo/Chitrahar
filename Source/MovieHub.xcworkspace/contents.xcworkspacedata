@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/manish/Documents/opensource/MovieHub/Dependencies/MovieHubShared/MovieShared.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Dependencies/MovieUIKit/MovieUIKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../Dependencies/MovieStorage/MovieStorage.xcodeproj">
    </FileRef>
    <FileRef

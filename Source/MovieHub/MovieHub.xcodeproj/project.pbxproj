@@ -18,6 +18,10 @@
 		136CD70025B8898C001B1110 /* MovieNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD6FE25B8898C001B1110 /* MovieNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		136CD70325B88991001B1110 /* MovieStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD70225B88991001B1110 /* MovieStorage.framework */; };
 		136CD70425B88991001B1110 /* MovieStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD70225B88991001B1110 /* MovieStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		136CD77225B88E8E001B1110 /* MovieShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD77025B88E8E001B1110 /* MovieShared.framework */; };
+		136CD77325B88E8E001B1110 /* MovieShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD77025B88E8E001B1110 /* MovieShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		136CD77425B88E8E001B1110 /* MovieUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD77125B88E8E001B1110 /* MovieUIKit.framework */; };
+		136CD77525B88E8E001B1110 /* MovieUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 136CD77125B88E8E001B1110 /* MovieUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				136CD70025B8898C001B1110 /* MovieNetwork.framework in Embed Frameworks */,
+				136CD77325B88E8E001B1110 /* MovieShared.framework in Embed Frameworks */,
+				136CD77525B88E8E001B1110 /* MovieUIKit.framework in Embed Frameworks */,
 				136CD70425B88991001B1110 /* MovieStorage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -68,6 +74,8 @@
 		136CD69325B888D3001B1110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		136CD6FE25B8898C001B1110 /* MovieNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovieNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		136CD70225B88991001B1110 /* MovieStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovieStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		136CD77025B88E8E001B1110 /* MovieShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovieShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		136CD77125B88E8E001B1110 /* MovieUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MovieUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				136CD6FF25B8898C001B1110 /* MovieNetwork.framework in Frameworks */,
+				136CD77225B88E8E001B1110 /* MovieShared.framework in Frameworks */,
+				136CD77425B88E8E001B1110 /* MovieUIKit.framework in Frameworks */,
 				136CD70325B88991001B1110 /* MovieStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +158,8 @@
 		136CD6FD25B8898C001B1110 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				136CD77025B88E8E001B1110 /* MovieShared.framework */,
+				136CD77125B88E8E001B1110 /* MovieUIKit.framework */,
 				136CD70225B88991001B1110 /* MovieStorage.framework */,
 				136CD6FE25B8898C001B1110 /* MovieNetwork.framework */,
 			);
