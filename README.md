@@ -1,2 +1,2 @@
-# MovieHub
+# Chitrahar
 iOS and iPad app project using movie db and clean architecture.
