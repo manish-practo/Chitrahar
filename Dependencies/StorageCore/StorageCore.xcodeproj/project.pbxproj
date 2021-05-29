@@ -13,6 +13,7 @@
 		A13CE3762662087900F7CFE2 /* CoreDataConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */; };
 		A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */; };
 		A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */; };
+		A13CE3842662267100F7CFE2 /* CoreDataStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfigProvider.swift; sourceTree = "<group>"; };
 		A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOperationProvider.swift; sourceTree = "<group>"; };
 		A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */,
 				A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */,
 				A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */,
+				A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */,
 			);
 			path = StorageCore;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */,
+				A13CE3842662267100F7CFE2 /* CoreDataStoreError.swift in Sources */,
 				A13CE3762662087900F7CFE2 /* CoreDataConfigProvider.swift in Sources */,
 				A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */,
 			);
