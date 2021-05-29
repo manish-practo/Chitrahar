@@ -10,6 +10,9 @@
 		A13CE3342661EECA00F7CFE2 /* StorageCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE32A2661EECA00F7CFE2 /* StorageCore.framework */; };
 		A13CE3392661EECA00F7CFE2 /* StorageCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3382661EECA00F7CFE2 /* StorageCoreTests.swift */; };
 		A13CE33B2661EECA00F7CFE2 /* StorageCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A13CE32D2661EECA00F7CFE2 /* StorageCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A13CE3762662087900F7CFE2 /* CoreDataConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */; };
+		A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */; };
+		A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		A13CE3332661EECA00F7CFE2 /* StorageCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorageCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE3382661EECA00F7CFE2 /* StorageCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreTests.swift; sourceTree = "<group>"; };
 		A13CE33A2661EECA00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfigProvider.swift; sourceTree = "<group>"; };
+		A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOperationProvider.swift; sourceTree = "<group>"; };
+		A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				A13CE32D2661EECA00F7CFE2 /* StorageCore.h */,
 				A13CE32E2661EECA00F7CFE2 /* Info.plist */,
+				A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */,
+				A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */,
+				A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */,
 			);
 			path = StorageCore;
 			sourceTree = "<group>";
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					A13CE3292661EECA00F7CFE2 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					A13CE3322661EECA00F7CFE2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */,
+				A13CE3762662087900F7CFE2 /* CoreDataConfigProvider.swift in Sources */,
+				A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		A13CE33F2661EECA00F7CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.StorageCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		A13CE3402661EECA00F7CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +403,7 @@
 		A13CE3422661EECA00F7CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StorageCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +421,7 @@
 		A13CE3432661EECA00F7CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = StorageCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
