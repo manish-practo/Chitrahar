@@ -16,10 +16,33 @@ class MockUserStorageManager: ObjectStorageManager {
         self.store.saveManagedContext(onResponse: onResponse)
     }
     
-    func fetch(onResponse: @escaping ([CD_User]?, Error?) -> Void) {
+    func fetchUsers(onResponse: @escaping ([CD_User]?, Error?) -> Void) {
         self.store.fetch(User.toManagedObjectType) { users, error in
             onResponse(users, error)
         }
+    }
+    
+    func updateUser(name: String, for userId: UUID,
+                    onResponse: @escaping (Bool, Error?) -> Void) {
+        let predicate = NSPredicate(format: "id == %@", userId.uuidString)
+        self.store.fetch(CD_User.self, filter: predicate) { (users, error) in
+            guard let _users = users, error == nil else {
+                onResponse(false, error)
+                return
+            }
+            
+            _users.forEach {
+                $0.name = name
+            }
+            
+            self.store.saveManagedContext(onResponse: onResponse)
+        }
+    }
+    
+    func delete(user: User,
+                onResponse: @escaping (Bool, Error?) -> Void) {
+        self.store.delete(user.toManagedObject(from: self.store.managedContext),
+                          onResponse: onResponse)
     }
     
 }

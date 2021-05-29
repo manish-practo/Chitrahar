@@ -87,7 +87,7 @@ extension CoreDataStore: CoreDataOperationProvider {
     }
     
     public func delete(_ managedObject: NSManagedObject,
-                onResponse: @escaping (Bool, Error?) -> Void) {
+                       onResponse: @escaping (Bool, Error?) -> Void) {
         if !self.isConfigured {
             onResponse(false, CoreDataStoreError.notYetConfigured)
             return
