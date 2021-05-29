@@ -12,9 +12,9 @@ public protocol CoreDataOperationProvider {
     
     func fetch<MANAGED_OBJECT: NSManagedObject>(_ managedObjectType: MANAGED_OBJECT.Type,
                                                 filter predicate: NSPredicate?,
-                                                onResponse: (_ object: [MANAGED_OBJECT]?, _ error: Error?) -> Void)
+                                                onResponse: @escaping (_ object: [MANAGED_OBJECT]?, _ error: Error?) -> Void)
     
     func delete(_ managedObject: NSManagedObject,
-                onResponse: (Bool, Error?) -> Void)
+                onResponse: @escaping (Bool, Error?) -> Void)
     
 }

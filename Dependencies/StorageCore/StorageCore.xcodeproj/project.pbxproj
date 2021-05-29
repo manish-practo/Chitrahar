@@ -14,6 +14,14 @@
 		A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */; };
 		A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */; };
 		A13CE3842662267100F7CFE2 /* CoreDataStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */; };
+		A13CE389266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A13CE387266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld */; };
+		A13CE38F2662295F00F7CFE2 /* CD_User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE38D2662295F00F7CFE2 /* CD_User+CoreDataClass.swift */; };
+		A13CE3902662295F00F7CFE2 /* CD_User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE38E2662295F00F7CFE2 /* CD_User+CoreDataProperties.swift */; };
+		A13CE39B266229A700F7CFE2 /* MockCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE39A266229A700F7CFE2 /* MockCoreDataStore.swift */; };
+		A13CE39F266229C600F7CFE2 /* MockUserStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE39E266229C600F7CFE2 /* MockUserStorageManager.swift */; };
+		A13CE3A326622A7600F7CFE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3A226622A7600F7CFE2 /* User.swift */; };
+		A13CE3A726623A5100F7CFE2 /* ObjectStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3A626623A5100F7CFE2 /* ObjectStorageManager.swift */; };
+		A13CE3B926623BB600F7CFE2 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3B826623BB600F7CFE2 /* Storable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +45,14 @@
 		A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataOperationProvider.swift; sourceTree = "<group>"; };
 		A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
 		A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStoreError.swift; sourceTree = "<group>"; };
+		A13CE388266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestStorageCoreModel.xcdatamodel; sourceTree = "<group>"; };
+		A13CE38D2662295F00F7CFE2 /* CD_User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CD_User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A13CE38E2662295F00F7CFE2 /* CD_User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CD_User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A13CE39A266229A700F7CFE2 /* MockCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStore.swift; sourceTree = "<group>"; };
+		A13CE39E266229C600F7CFE2 /* MockUserStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserStorageManager.swift; sourceTree = "<group>"; };
+		A13CE3A226622A7600F7CFE2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A13CE3A626623A5100F7CFE2 /* ObjectStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectStorageManager.swift; sourceTree = "<group>"; };
+		A13CE3B826623BB600F7CFE2 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +95,8 @@
 		A13CE32C2661EECA00F7CFE2 /* StorageCore */ = {
 			isa = PBXGroup;
 			children = (
-				A13CE32D2661EECA00F7CFE2 /* StorageCore.h */,
-				A13CE32E2661EECA00F7CFE2 /* Info.plist */,
-				A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */,
-				A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */,
-				A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */,
-				A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */,
+				A13CE3AD26623ACF00F7CFE2 /* Supporting Files */,
+				A13CE3B026623B0E00F7CFE2 /* Core Data */,
 			);
 			path = StorageCore;
 			sourceTree = "<group>";
@@ -92,10 +104,70 @@
 		A13CE3372661EECA00F7CFE2 /* StorageCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				A13CE38C266228FF00F7CFE2 /* Core */,
 				A13CE3382661EECA00F7CFE2 /* StorageCoreTests.swift */,
 				A13CE33A2661EECA00F7CFE2 /* Info.plist */,
 			);
 			path = StorageCoreTests;
+			sourceTree = "<group>";
+		};
+		A13CE38C266228FF00F7CFE2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE3952662297300F7CFE2 /* Model */,
+				A13CE387266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld */,
+				A13CE39A266229A700F7CFE2 /* MockCoreDataStore.swift */,
+				A13CE39E266229C600F7CFE2 /* MockUserStorageManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A13CE3952662297300F7CFE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE38D2662295F00F7CFE2 /* CD_User+CoreDataClass.swift */,
+				A13CE38E2662295F00F7CFE2 /* CD_User+CoreDataProperties.swift */,
+				A13CE3A226622A7600F7CFE2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A13CE3AA26623AC400F7CFE2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE3B326623B3800F7CFE2 /* Providers */,
+				A13CE3832662267100F7CFE2 /* CoreDataStoreError.swift */,
+				A13CE3A626623A5100F7CFE2 /* ObjectStorageManager.swift */,
+				A13CE3B826623BB600F7CFE2 /* Storable.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A13CE3AD26623ACF00F7CFE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE32D2661EECA00F7CFE2 /* StorageCore.h */,
+				A13CE32E2661EECA00F7CFE2 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A13CE3B026623B0E00F7CFE2 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE3AA26623AC400F7CFE2 /* Core */,
+				A13CE37F26620F4500F7CFE2 /* CoreDataStore.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		A13CE3B326623B3800F7CFE2 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE3752662087900F7CFE2 /* CoreDataConfigProvider.swift */,
+				A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +282,9 @@
 				A13CE38026620F4500F7CFE2 /* CoreDataStore.swift in Sources */,
 				A13CE3842662267100F7CFE2 /* CoreDataStoreError.swift in Sources */,
 				A13CE3762662087900F7CFE2 /* CoreDataConfigProvider.swift in Sources */,
+				A13CE3B926623BB600F7CFE2 /* Storable.swift in Sources */,
 				A13CE37C26620DA400F7CFE2 /* CoreDataOperationProvider.swift in Sources */,
+				A13CE3A726623A5100F7CFE2 /* ObjectStorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13CE39B266229A700F7CFE2 /* MockCoreDataStore.swift in Sources */,
+				A13CE38F2662295F00F7CFE2 /* CD_User+CoreDataClass.swift in Sources */,
+				A13CE389266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld in Sources */,
+				A13CE3902662295F00F7CFE2 /* CD_User+CoreDataProperties.swift in Sources */,
+				A13CE39F266229C600F7CFE2 /* MockUserStorageManager.swift in Sources */,
 				A13CE3392661EECA00F7CFE2 /* StorageCoreTests.swift in Sources */,
+				A13CE3A326622A7600F7CFE2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +444,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = StorageCore/Info.plist;
+				INFOPLIST_FILE = "StorageCore/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +469,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = StorageCore/Info.plist;
+				INFOPLIST_FILE = "StorageCore/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -471,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A13CE387266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A13CE388266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodel */,
+			);
+			currentVersion = A13CE388266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodel */;
+			path = TestStorageCoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A13CE3212661EECA00F7CFE2 /* Project object */;
 }

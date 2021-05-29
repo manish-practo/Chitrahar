@@ -55,34 +55,39 @@ extension CoreDataStore: CoreDataOperationProvider {
     
     public func fetch<MANAGED_OBJECT: NSManagedObject>(_ managedObjectType: MANAGED_OBJECT.Type,
                                                        filter predicate: NSPredicate? = nil,
-                                                       onResponse: (_ object: [MANAGED_OBJECT]?, _ error: Error?) -> Void) {
+                                                       onResponse: @escaping (_ object: [MANAGED_OBJECT]?, _ error: Error?) -> Void) {
         if !self.isConfigured {
             onResponse(nil, CoreDataStoreError.notYetConfigured)
             return
         }
         
-        let objectEntityName: String = String(describing: managedObjectType)
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: objectEntityName)
-        fetchRequest.predicate = predicate
-        
-        do {
-            let result = try managedContext.fetch(fetchRequest) as? [MANAGED_OBJECT]
-            onResponse(result, nil)
-        } catch {
-            onResponse(nil, error)
+        self.managedContext.perform { [weak self] in
+            let objectEntityName: String = String(describing: managedObjectType)
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: objectEntityName)
+            fetchRequest.predicate = predicate
+            
+            do {
+                let result = try self?.managedContext.fetch(fetchRequest) as? [MANAGED_OBJECT]
+                onResponse(result, nil)
+            } catch {
+                onResponse(nil, error)
+            }
         }
         
     }
     
     public func delete(_ managedObject: NSManagedObject,
-                onResponse: (Bool, Error?) -> Void) {
+                onResponse: @escaping (Bool, Error?) -> Void) {
         if !self.isConfigured {
             onResponse(false, CoreDataStoreError.notYetConfigured)
             return
         }
         
-        self.managedContext.delete(managedObject)
-        self.saveManagedContext(onResponse: onResponse)
+        self.managedContext.perform { [weak self] in
+            self?.managedContext.delete(managedObject)
+            self?.saveManagedContext(onResponse: onResponse)
+        }
+        
     }
     
 }
