@@ -74,7 +74,7 @@ extension StorageCoreTests {
         
         let exp = expectation(description: "fetchUserExpectation")
         
-        self.sut.fetch() { (users, error) in
+        self.sut.fetch { (users, error) in
             _users = users
             _error = error
             

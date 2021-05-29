@@ -8,17 +8,18 @@
 import Foundation
 @testable import StorageCore
 
-class MockUserStorageManager: ObjectStorageProvider<User> {
+class MockUserStorageManager: ObjectStorageManager {
     
-    override func create(_ object: User,
-                         onResponse: (Bool, Error?) -> Void) {
-        object.toManagedObject(from: self.store.managedContext)
+    func create(_ user: User,
+                onResponse: (Bool, Error?) -> Void) {
+        user.toManagedObject(from: self.store.managedContext)
         self.store.saveManagedContext(onResponse: onResponse)
     }
     
     func fetch(onResponse: @escaping ([CD_User]?, Error?) -> Void) {
-        self.store.fetch(User.toManagedObjectType,
-                         onResponse: onResponse)
+        self.store.fetch(User.toManagedObjectType) { users, error in
+            onResponse(users, error)
+        }
     }
     
 }
