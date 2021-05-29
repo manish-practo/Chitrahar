@@ -13,6 +13,8 @@
 		A13CE2412661DD1A00F7CFE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13CE23F2661DD1A00F7CFE2 /* LaunchScreen.storyboard */; };
 		A13CE24C2661DD1A00F7CFE2 /* MovieHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE24B2661DD1A00F7CFE2 /* MovieHubTests.swift */; };
 		A13CE2572661DD1A00F7CFE2 /* MovieHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE2562661DD1A00F7CFE2 /* MovieHubUITests.swift */; };
+		A13CE3192661EC5D00F7CFE2 /* CocoaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */; };
+		A13CE31A2661EC5D00F7CFE2 /* CocoaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A13CE31B2661EC5D00F7CFE2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A13CE31A2661EC5D00F7CFE2 /* CocoaCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A13CE2312661DD1900F7CFE2 /* MovieHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE2342661DD1900F7CFE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +61,7 @@
 		A13CE2522661DD1A00F7CFE2 /* MovieHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE2562661DD1A00F7CFE2 /* MovieHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHubUITests.swift; sourceTree = "<group>"; };
 		A13CE2582661DD1A00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13CE3192661EC5D00F7CFE2 /* CocoaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +97,7 @@
 				A13CE24A2661DD1A00F7CFE2 /* MovieHubTests */,
 				A13CE2552661DD1A00F7CFE2 /* MovieHubUITests */,
 				A13CE2322661DD1900F7CFE2 /* Products */,
+				A13CE3172661EC5D00F7CFE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +165,14 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		A13CE3172661EC5D00F7CFE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +183,7 @@
 				A13CE22D2661DD1900F7CFE2 /* Sources */,
 				A13CE22E2661DD1900F7CFE2 /* Frameworks */,
 				A13CE22F2661DD1900F7CFE2 /* Resources */,
+				A13CE31B2661EC5D00F7CFE2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
