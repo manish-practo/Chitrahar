@@ -1,13 +1,13 @@
 //
-//  MovieHubUITests.swift
-//  MovieHubUITests
+//  ChitraharUITests.swift
+//  ChitraharUITests
 //
 //  Created by Manish Pandey on 29/05/21.
 //
 
 import XCTest
 
-class MovieHubUITests: XCTestCase {
+class ChitraharUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

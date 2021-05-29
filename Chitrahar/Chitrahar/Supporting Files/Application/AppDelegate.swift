@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MovieHub
+//  ChitraharUITests
 //
 //  Created by Manish Pandey on 29/05/21.
 //

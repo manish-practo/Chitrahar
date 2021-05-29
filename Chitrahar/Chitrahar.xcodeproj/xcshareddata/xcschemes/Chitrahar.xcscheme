@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A13CE2302661DD1900F7CFE2"
-               BuildableName = "MovieHub.app"
-               BlueprintName = "MovieHub"
-               ReferencedContainer = "container:MovieHub.xcodeproj">
+               BuildableName = "Chitrahar.app"
+               BlueprintName = "Chitrahar"
+               ReferencedContainer = "container:Chitrahar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A13CE2462661DD1A00F7CFE2"
-               BuildableName = "MovieHubTests.xctest"
-               BlueprintName = "MovieHubTests"
-               ReferencedContainer = "container:MovieHub.xcodeproj">
+               BuildableName = "ChitraharTests.xctest"
+               BlueprintName = "ChitraharTests"
+               ReferencedContainer = "container:Chitrahar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A13CE2512661DD1A00F7CFE2"
-               BuildableName = "MovieHubUITests.xctest"
-               BlueprintName = "MovieHubUITests"
-               ReferencedContainer = "container:MovieHub.xcodeproj">
+               BuildableName = "ChitraharUITests.xctest"
+               BlueprintName = "ChitraharUITests"
+               ReferencedContainer = "container:Chitrahar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -101,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A13CE2302661DD1900F7CFE2"
-            BuildableName = "MovieHub.app"
-            BlueprintName = "MovieHub"
-            ReferencedContainer = "container:MovieHub.xcodeproj">
+            BuildableName = "Chitrahar.app"
+            BlueprintName = "Chitrahar"
+            ReferencedContainer = "container:Chitrahar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -118,9 +118,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A13CE2302661DD1900F7CFE2"
-            BuildableName = "MovieHub.app"
-            BlueprintName = "MovieHub"
-            ReferencedContainer = "container:MovieHub.xcodeproj">
+            BuildableName = "Chitrahar.app"
+            BlueprintName = "Chitrahar"
+            ReferencedContainer = "container:Chitrahar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

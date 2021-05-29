@@ -16,10 +16,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A13CE2462661DD1A00F7CFE2"
-               BuildableName = "MovieHubTests.xctest"
-               BlueprintName = "MovieHubTests"
-               ReferencedContainer = "container:MovieHub.xcodeproj">
+               BlueprintIdentifier = "A13CE2512661DD1A00F7CFE2"
+               BuildableName = "ChitraharUITests.xctest"
+               BlueprintName = "ChitraharUITests"
+               ReferencedContainer = "container:Chitrahar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

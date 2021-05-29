@@ -11,8 +11,8 @@
 		A13CE2392661DD1900F7CFE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE2382661DD1900F7CFE2 /* MainViewController.swift */; };
 		A13CE23E2661DD1A00F7CFE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A13CE23D2661DD1A00F7CFE2 /* Assets.xcassets */; };
 		A13CE2412661DD1A00F7CFE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13CE23F2661DD1A00F7CFE2 /* LaunchScreen.storyboard */; };
-		A13CE24C2661DD1A00F7CFE2 /* MovieHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE24B2661DD1A00F7CFE2 /* MovieHubTests.swift */; };
-		A13CE2572661DD1A00F7CFE2 /* MovieHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE2562661DD1A00F7CFE2 /* MovieHubUITests.swift */; };
+		A13CE24C2661DD1A00F7CFE2 /* ChitraharTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE24B2661DD1A00F7CFE2 /* ChitraharTests.swift */; };
+		A13CE2572661DD1A00F7CFE2 /* ChitraharUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE2562661DD1A00F7CFE2 /* ChitraharUITests.swift */; };
 		A13CE3192661EC5D00F7CFE2 /* CocoaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */; };
 		A13CE31A2661EC5D00F7CFE2 /* CocoaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A13CE3472661EED500F7CFE2 /* StorageCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE3462661EED500F7CFE2 /* StorageCore.framework */; };
@@ -52,17 +52,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A13CE2312661DD1900F7CFE2 /* MovieHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13CE2312661DD1900F7CFE2 /* Chitrahar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chitrahar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE2342661DD1900F7CFE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A13CE2382661DD1900F7CFE2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A13CE23D2661DD1A00F7CFE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A13CE2402661DD1A00F7CFE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A13CE2422661DD1A00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A13CE2472661DD1A00F7CFE2 /* MovieHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A13CE24B2661DD1A00F7CFE2 /* MovieHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHubTests.swift; sourceTree = "<group>"; };
+		A13CE2472661DD1A00F7CFE2 /* ChitraharTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChitraharTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13CE24B2661DD1A00F7CFE2 /* ChitraharTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitraharTests.swift; sourceTree = "<group>"; };
 		A13CE24D2661DD1A00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A13CE2522661DD1A00F7CFE2 /* MovieHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A13CE2562661DD1A00F7CFE2 /* MovieHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHubUITests.swift; sourceTree = "<group>"; };
+		A13CE2522661DD1A00F7CFE2 /* ChitraharUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChitraharUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13CE2562661DD1A00F7CFE2 /* ChitraharUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChitraharUITests.swift; sourceTree = "<group>"; };
 		A13CE2582661DD1A00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A13CE3182661EC5D00F7CFE2 /* CocoaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE3462661EED500F7CFE2 /* StorageCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StorageCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +98,9 @@
 		A13CE2282661DD1900F7CFE2 = {
 			isa = PBXGroup;
 			children = (
-				A13CE2332661DD1900F7CFE2 /* MovieHub */,
-				A13CE24A2661DD1A00F7CFE2 /* MovieHubTests */,
-				A13CE2552661DD1A00F7CFE2 /* MovieHubUITests */,
+				A13CE2332661DD1900F7CFE2 /* Chitrahar */,
+				A13CE24A2661DD1A00F7CFE2 /* ChitraharTests */,
+				A13CE2552661DD1A00F7CFE2 /* ChitraharUITests */,
 				A13CE2322661DD1900F7CFE2 /* Products */,
 				A13CE3172661EC5D00F7CFE2 /* Frameworks */,
 			);
@@ -109,38 +109,38 @@
 		A13CE2322661DD1900F7CFE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A13CE2312661DD1900F7CFE2 /* MovieHub.app */,
-				A13CE2472661DD1A00F7CFE2 /* MovieHubTests.xctest */,
-				A13CE2522661DD1A00F7CFE2 /* MovieHubUITests.xctest */,
+				A13CE2312661DD1900F7CFE2 /* Chitrahar.app */,
+				A13CE2472661DD1A00F7CFE2 /* ChitraharTests.xctest */,
+				A13CE2522661DD1A00F7CFE2 /* ChitraharUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A13CE2332661DD1900F7CFE2 /* MovieHub */ = {
+		A13CE2332661DD1900F7CFE2 /* Chitrahar */ = {
 			isa = PBXGroup;
 			children = (
 				A13CE2382661DD1900F7CFE2 /* MainViewController.swift */,
 				A13CE2792661E7D200F7CFE2 /* Supporting Files */,
 			);
-			path = MovieHub;
+			path = Chitrahar;
 			sourceTree = "<group>";
 		};
-		A13CE24A2661DD1A00F7CFE2 /* MovieHubTests */ = {
+		A13CE24A2661DD1A00F7CFE2 /* ChitraharTests */ = {
 			isa = PBXGroup;
 			children = (
-				A13CE24B2661DD1A00F7CFE2 /* MovieHubTests.swift */,
+				A13CE24B2661DD1A00F7CFE2 /* ChitraharTests.swift */,
 				A13CE24D2661DD1A00F7CFE2 /* Info.plist */,
 			);
-			path = MovieHubTests;
+			path = ChitraharTests;
 			sourceTree = "<group>";
 		};
-		A13CE2552661DD1A00F7CFE2 /* MovieHubUITests */ = {
+		A13CE2552661DD1A00F7CFE2 /* ChitraharUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A13CE2562661DD1A00F7CFE2 /* MovieHubUITests.swift */,
+				A13CE2562661DD1A00F7CFE2 /* ChitraharUITests.swift */,
 				A13CE2582661DD1A00F7CFE2 /* Info.plist */,
 			);
-			path = MovieHubUITests;
+			path = ChitraharUITests;
 			sourceTree = "<group>";
 		};
 		A13CE2792661E7D200F7CFE2 /* Supporting Files */ = {
@@ -182,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A13CE2302661DD1900F7CFE2 /* MovieHub */ = {
+		A13CE2302661DD1900F7CFE2 /* Chitrahar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A13CE25B2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHub" */;
+			buildConfigurationList = A13CE25B2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "Chitrahar" */;
 			buildPhases = (
 				A13CE22D2661DD1900F7CFE2 /* Sources */,
 				A13CE22E2661DD1900F7CFE2 /* Frameworks */,
@@ -195,14 +195,14 @@
 			);
 			dependencies = (
 			);
-			name = MovieHub;
+			name = Chitrahar;
 			productName = MovieHub;
-			productReference = A13CE2312661DD1900F7CFE2 /* MovieHub.app */;
+			productReference = A13CE2312661DD1900F7CFE2 /* Chitrahar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A13CE2462661DD1A00F7CFE2 /* MovieHubTests */ = {
+		A13CE2462661DD1A00F7CFE2 /* ChitraharTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A13CE25E2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHubTests" */;
+			buildConfigurationList = A13CE25E2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "ChitraharTests" */;
 			buildPhases = (
 				A13CE2432661DD1A00F7CFE2 /* Sources */,
 				A13CE2442661DD1A00F7CFE2 /* Frameworks */,
@@ -213,14 +213,14 @@
 			dependencies = (
 				A13CE2492661DD1A00F7CFE2 /* PBXTargetDependency */,
 			);
-			name = MovieHubTests;
+			name = ChitraharTests;
 			productName = MovieHubTests;
-			productReference = A13CE2472661DD1A00F7CFE2 /* MovieHubTests.xctest */;
+			productReference = A13CE2472661DD1A00F7CFE2 /* ChitraharTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A13CE2512661DD1A00F7CFE2 /* MovieHubUITests */ = {
+		A13CE2512661DD1A00F7CFE2 /* ChitraharUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A13CE2612661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHubUITests" */;
+			buildConfigurationList = A13CE2612661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "ChitraharUITests" */;
 			buildPhases = (
 				A13CE24E2661DD1A00F7CFE2 /* Sources */,
 				A13CE24F2661DD1A00F7CFE2 /* Frameworks */,
@@ -231,9 +231,9 @@
 			dependencies = (
 				A13CE2542661DD1A00F7CFE2 /* PBXTargetDependency */,
 			);
-			name = MovieHubUITests;
+			name = ChitraharUITests;
 			productName = MovieHubUITests;
-			productReference = A13CE2522661DD1A00F7CFE2 /* MovieHubUITests.xctest */;
+			productReference = A13CE2522661DD1A00F7CFE2 /* ChitraharUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A13CE22C2661DD1900F7CFE2 /* Build configuration list for PBXProject "MovieHub" */;
+			buildConfigurationList = A13CE22C2661DD1900F7CFE2 /* Build configuration list for PBXProject "Chitrahar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -271,9 +271,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A13CE2302661DD1900F7CFE2 /* MovieHub */,
-				A13CE2462661DD1A00F7CFE2 /* MovieHubTests */,
-				A13CE2512661DD1A00F7CFE2 /* MovieHubUITests */,
+				A13CE2302661DD1900F7CFE2 /* Chitrahar */,
+				A13CE2462661DD1A00F7CFE2 /* ChitraharTests */,
+				A13CE2512661DD1A00F7CFE2 /* ChitraharUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A13CE24C2661DD1A00F7CFE2 /* MovieHubTests.swift in Sources */,
+				A13CE24C2661DD1A00F7CFE2 /* ChitraharTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A13CE2572661DD1A00F7CFE2 /* MovieHubUITests.swift in Sources */,
+				A13CE2572661DD1A00F7CFE2 /* ChitraharUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,12 +335,12 @@
 /* Begin PBXTargetDependency section */
 		A13CE2492661DD1A00F7CFE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A13CE2302661DD1900F7CFE2 /* MovieHub */;
+			target = A13CE2302661DD1900F7CFE2 /* Chitrahar */;
 			targetProxy = A13CE2482661DD1A00F7CFE2 /* PBXContainerItemProxy */;
 		};
 		A13CE2542661DD1A00F7CFE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A13CE2302661DD1900F7CFE2 /* MovieHub */;
+			target = A13CE2302661DD1900F7CFE2 /* Chitrahar */;
 			targetProxy = A13CE2532661DD1A00F7CFE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -479,12 +479,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MovieHub/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Chitrahar/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.manish.MovieHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manish.chitrahar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,12 +497,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MovieHub/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Chitrahar/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.manish.MovieHub;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manish.chitrahar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +526,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieHub.app/MovieHub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chitrahar.app/Chitrahar";
 			};
 			name = Debug;
 		};
@@ -547,7 +547,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MovieHub.app/MovieHub";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chitrahar.app/Chitrahar";
 			};
 			name = Release;
 		};
@@ -592,7 +592,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A13CE22C2661DD1900F7CFE2 /* Build configuration list for PBXProject "MovieHub" */ = {
+		A13CE22C2661DD1900F7CFE2 /* Build configuration list for PBXProject "Chitrahar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A13CE2592661DD1A00F7CFE2 /* Debug */,
@@ -601,7 +601,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A13CE25B2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHub" */ = {
+		A13CE25B2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "Chitrahar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A13CE25C2661DD1A00F7CFE2 /* Debug */,
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A13CE25E2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHubTests" */ = {
+		A13CE25E2661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "ChitraharTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A13CE25F2661DD1A00F7CFE2 /* Debug */,
@@ -619,7 +619,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A13CE2612661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "MovieHubUITests" */ = {
+		A13CE2612661DD1A00F7CFE2 /* Build configuration list for PBXNativeTarget "ChitraharUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A13CE2622661DD1A00F7CFE2 /* Debug */,

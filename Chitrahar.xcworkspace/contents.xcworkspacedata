@@ -8,6 +8,6 @@
       location = "group:Dependencies/CocoaCore/CocoaCore.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MovieHub/MovieHub.xcodeproj">
+      location = "group:Chitrahar/Chitrahar.xcodeproj">
    </FileRef>
 </Workspace>

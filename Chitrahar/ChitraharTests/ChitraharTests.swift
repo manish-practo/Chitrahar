@@ -1,6 +1,6 @@
 //
-//  MovieHubTests.swift
-//  MovieHubTests
+//  ChitraharTests.swift
+//  ChitraharTests
 //
 //  Created by Manish Pandey on 29/05/21.
 //
@@ -8,7 +8,7 @@
 import XCTest
 @testable import MovieHub
 
-class MovieHubTests: XCTestCase {
+class ChitraharTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
