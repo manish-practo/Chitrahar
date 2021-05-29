@@ -114,10 +114,9 @@
 		A13CE38C266228FF00F7CFE2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A1D30431266260E700F55F1C /* Mock */,
 				A13CE3952662297300F7CFE2 /* Model */,
 				A13CE387266228F100F7CFE2 /* TestStorageCoreModel.xcdatamodeld */,
-				A13CE39A266229A700F7CFE2 /* MockCoreDataStore.swift */,
-				A13CE39E266229C600F7CFE2 /* MockUserStorageManager.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -168,6 +167,15 @@
 				A13CE37B26620DA400F7CFE2 /* CoreDataOperationProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		A1D30431266260E700F55F1C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A13CE39A266229A700F7CFE2 /* MockCoreDataStore.swift */,
+				A13CE39E266229C600F7CFE2 /* MockUserStorageManager.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

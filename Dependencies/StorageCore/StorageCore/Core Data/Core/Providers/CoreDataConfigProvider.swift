@@ -16,7 +16,7 @@ public protocol CoreDataConfigProvider {
     
     func configureSetups(onResponse: @escaping (Error?) -> Void)
     func loadPersistentStores(with persistentContainerName: String,
-                              onResponse: @escaping (NSPersistentStoreDescription, Error?) -> Void)
+                              onResponse: @escaping (NSPersistentStoreDescription?, Error?) -> Void)
     func saveManagedContext(onResponse: (Bool, Error?) -> Void)
     
 }

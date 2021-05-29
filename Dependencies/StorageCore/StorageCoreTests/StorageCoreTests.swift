@@ -10,24 +10,82 @@ import XCTest
 
 class StorageCoreTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    private var store: CoreDataStore!
+    private var sut: MockUserStorageManager!
+    private var defaultUser: User!
+    
+    private let expectationTimeout = TimeInterval(10)
+    private let xcModelName = "TestStorageCoreModel"
+    private let currentBundle = Bundle(for: StorageCoreTests.self)
+    
+    override func setUp() {
+        let configExp = expectation(description: "storeConfigureSetupsExpectation")
+        
+        self.store = CoreDataStore(containerName: self.xcModelName, bundle: currentBundle)
+        self.store.configureSetups {(error) in
+            assert(error == nil, error.debugDescription)
+            
+            configExp.fulfill()
         }
+        
+        wait(for: [configExp], timeout: self.expectationTimeout)
+        
+        self.sut = MockUserStorageManager(store: self.store)
+        self.defaultUser = User(id: UUID(), name: "ABC")
+    }
+    
+    override func tearDown() {
+        self.store = nil
+        self.sut = nil
     }
 
+}
+
+// MARK: - Create
+extension StorageCoreTests {
+    
+    func test_createUser_success() {
+        var _status = false
+        var _error: Error? = nil
+        
+        let exp = expectation(description: "createUserExpectation")
+        
+        sut.create(self.defaultUser) { (status, error) in
+            _status = status
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertTrue(_status)
+        XCTAssertNil(_error)
+    }
+    
+}
+
+extension StorageCoreTests {
+    
+    func test_fetchUsers_success() {
+        
+        var _users: [CD_User]?
+        var _error: Error?
+        
+        let exp = expectation(description: "fetchUserExpectation")
+        
+        self.sut.fetch() { (users, error) in
+            _users = users
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertNotNil(_users)
+        XCTAssertNil(_error)
+        
+    }
+    
 }

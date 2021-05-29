@@ -16,12 +16,17 @@ struct User: Storable {
 
 extension User {
     
+    @discardableResult
     func toManagedObject(from managedContext: NSManagedObjectContext) -> NSManagedObject {
         let cdUser = CD_User(context: managedContext)
         cdUser.id = self.id
         cdUser.name = self.name
         
         return cdUser
+    }
+    
+    static var toManagedObjectType: CD_User.Type {
+        return CD_User.self
     }
     
 }

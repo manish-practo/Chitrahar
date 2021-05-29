@@ -9,4 +9,5 @@ import Foundation
 
 enum CoreDataStoreError: Error {
     case notYetConfigured
+    case couldNotLoadDataModel
 }

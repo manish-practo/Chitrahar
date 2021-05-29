@@ -1,5 +1,5 @@
 //
-//  ManagedObjectStorageManager.swift
+//  ObjectStorageProvider.swift
 //  StorageCore
 //
 //  Created by Manish Pandey on 29/05/21.
@@ -7,22 +7,18 @@
 
 import Foundation
 
-public class ObjectStorageManager {
+public class ObjectStorageProvider<Object: Storable> {
     
-    func create() {
-        
+    private(set) public var store: CoreDataStore
+    
+    init(store: CoreDataStore) {
+        self.store = store
     }
     
-    func fetch() {
-        
-    }
-    
-    func update() {
-        
-    }
-    
-    func delete() {
-        
-    }
+    func create(_ object: Object,
+                onResponse: (Bool, Error?) -> Void) { }
+    func fetch(_ objectType: Object.Type) { }
+    func update(_ object: Object) { }
+    func delete(_ object: Object) { }
     
 }

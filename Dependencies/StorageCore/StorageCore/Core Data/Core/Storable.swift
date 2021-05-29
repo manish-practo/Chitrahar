@@ -10,6 +10,10 @@ import CoreData
 
 public protocol Storable {
     
+    @discardableResult
     func toManagedObject(from managedContext: NSManagedObjectContext) -> NSManagedObject
+    
+    associatedtype ManagedObjectType: NSManagedObject
+    static var toManagedObjectType: ManagedObjectType.Type { get }
     
 }
