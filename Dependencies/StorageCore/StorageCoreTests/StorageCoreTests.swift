@@ -64,7 +64,7 @@ extension StorageCoreTests {
         XCTAssertNil(_error)
     }
     
-    func test_createUser_withoutName_failiure() {
+    func test_createUser_withoutName_failure() {
         var _status = false
         var _error: Error? = nil
         
@@ -84,7 +84,7 @@ extension StorageCoreTests {
         XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.nameCanNotBeEmpty)
     }
     
-    func test_createUser_invalidName_failiure() {
+    func test_createUser_invalidName_failure() {
         var _status = false
         var _error: Error? = nil
         
@@ -104,7 +104,7 @@ extension StorageCoreTests {
         XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.invalidName)
     }
     
-    func test_createUser_duplicate_failiure() {
+    func test_createUser_duplicate_failure() {
         // First create - Success
         var _status = false
         var _error: Error? = nil
@@ -193,11 +193,11 @@ extension StorageCoreTests {
         
     }
     
-    func test_fetchUsers_failiure() {
+    func test_fetchUsers_failure() {
         var _users: [CD_User]?
         var _error: Error?
         
-        let exp = expectation(description: "fetchUserFailiureExpectation")
+        let exp = expectation(description: "fetchUserfailureExpectation")
         
         self.sut.fetchUsers { (users, error) in
             _users = users

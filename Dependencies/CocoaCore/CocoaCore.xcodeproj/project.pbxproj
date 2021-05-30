@@ -10,6 +10,9 @@
 		A13CE3012661EC2E00F7CFE2 /* CocoaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE2F72661EC2E00F7CFE2 /* CocoaCore.framework */; };
 		A13CE3062661EC2E00F7CFE2 /* CocoaCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3052661EC2E00F7CFE2 /* CocoaCoreTests.swift */; };
 		A13CE3082661EC2E00F7CFE2 /* CocoaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A13CE2FA2661EC2E00F7CFE2 /* CocoaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1524C8926637EB6007D10EC /* TableViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1524C8826637EB6007D10EC /* TableViewCell+Dequeue.swift */; };
+		A1524C8D26637F1E007D10EC /* TableViewCell+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1524C8C26637F1E007D10EC /* TableViewCell+Register.swift */; };
+		A1524C9326637F7E007D10EC /* TestUITableViewCellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1524C9226637F7E007D10EC /* TestUITableViewCellRegistration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		A13CE3002661EC2E00F7CFE2 /* CocoaCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE3052661EC2E00F7CFE2 /* CocoaCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaCoreTests.swift; sourceTree = "<group>"; };
 		A13CE3072661EC2E00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1524C8826637EB6007D10EC /* TableViewCell+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Dequeue.swift"; sourceTree = "<group>"; };
+		A1524C8C26637F1E007D10EC /* TableViewCell+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Register.swift"; sourceTree = "<group>"; };
+		A1524C9226637F7E007D10EC /* TestUITableViewCellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITableViewCellRegistration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		A13CE2F92661EC2E00F7CFE2 /* CocoaCore */ = {
 			isa = PBXGroup;
 			children = (
+				A1524C8626637E79007D10EC /* Extensions */,
 				A13CE2FA2661EC2E00F7CFE2 /* CocoaCore.h */,
 				A13CE2FB2661EC2E00F7CFE2 /* Info.plist */,
 			);
@@ -80,10 +87,44 @@
 		A13CE3042661EC2E00F7CFE2 /* CocoaCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				A1524C9026637F54007D10EC /* Extensions */,
 				A13CE3052661EC2E00F7CFE2 /* CocoaCoreTests.swift */,
 				A13CE3072661EC2E00F7CFE2 /* Info.plist */,
 			);
 			path = CocoaCoreTests;
+			sourceTree = "<group>";
+		};
+		A1524C8626637E79007D10EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1524C8726637E81007D10EC /* UITableView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A1524C8726637E81007D10EC /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				A1524C8826637EB6007D10EC /* TableViewCell+Dequeue.swift */,
+				A1524C8C26637F1E007D10EC /* TableViewCell+Register.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		A1524C9026637F54007D10EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1524C9126637F5D007D10EC /* UITableView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A1524C9126637F5D007D10EC /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				A1524C9226637F7E007D10EC /* TestUITableViewCellRegistration.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +173,8 @@
 				A13CE3032661EC2E00F7CFE2 /* PBXTargetDependency */,
 			);
 			name = CocoaCoreTests;
+			packageProductDependencies = (
+			);
 			productName = CocoaCoreTests;
 			productReference = A13CE3002661EC2E00F7CFE2 /* CocoaCoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -147,6 +190,7 @@
 				TargetAttributes = {
 					A13CE2F62661EC2E00F7CFE2 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					A13CE2FF2661EC2E00F7CFE2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -162,6 +206,8 @@
 				Base,
 			);
 			mainGroup = A13CE2ED2661EC2E00F7CFE2;
+			packageReferences = (
+			);
 			productRefGroup = A13CE2F82661EC2E00F7CFE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1524C8D26637F1E007D10EC /* TableViewCell+Register.swift in Sources */,
+				A1524C8926637EB6007D10EC /* TableViewCell+Dequeue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1524C9326637F7E007D10EC /* TestUITableViewCellRegistration.swift in Sources */,
 				A13CE3062661EC2E00F7CFE2 /* CocoaCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +390,7 @@
 		A13CE30C2661EC2E00F7CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +406,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.CocoaCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +416,7 @@
 		A13CE30D2661EC2E00F7CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.CocoaCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +441,7 @@
 		A13CE30F2661EC2E00F7CFE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CocoaCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +459,7 @@
 		A13CE3102661EC2E00F7CFE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CocoaCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
