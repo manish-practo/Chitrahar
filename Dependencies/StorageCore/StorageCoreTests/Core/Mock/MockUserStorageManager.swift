@@ -11,7 +11,7 @@ import Foundation
 class MockUserStorageManager: ObjectStorageManager {
     
     func create(_ user: User,
-                onResponse: (Bool, Error?) -> Void) {
+                onResponse: @escaping (Bool, Error?) -> Void) {
         
         self.validate(user.name) { (error) in
             guard error == nil else {
@@ -19,8 +19,16 @@ class MockUserStorageManager: ObjectStorageManager {
                 return
             }
             
-            user.toManagedObject(from: self.store.managedContext)
-            self.store.saveManagedContext(onResponse: onResponse)
+            self.doesUserExist(userId: user.id) { (doesUserIdExists) in
+                if doesUserIdExists {
+                    onResponse(false, MockUserStorageError.idAlreadyExists)
+                    return
+                }
+                
+                user.toManagedObject(from: self.store.managedContext)
+                self.store.saveManagedContext(onResponse: onResponse)
+            }
+            
         }
         
     }
@@ -37,24 +45,18 @@ class MockUserStorageManager: ObjectStorageManager {
                 return
             }
             
-            self.doesUserExist(with: name) { (doesUserExists) in
-                if doesUserExists {
-                    onResponse(false, MockUserStorageError.nameAlreadyExists)
+            let predicate = NSPredicate(format: "id == %@", userId.uuidString)
+            self.store.fetch(CD_User.self, filter: predicate) { (users, error) in
+                guard let _users = users else {
+                    onResponse(false, MockUserStorageError.idDoesNotExist)
+                    return
                 }
                 
-                let predicate = NSPredicate(format: "id == %@", userId.uuidString)
-                self.store.fetch(CD_User.self, filter: predicate) { (users, error) in
-                    guard let _users = users, error == nil else {
-                        onResponse(false, error)
-                        return
-                    }
-                    
-                    _users.forEach {
-                        $0.name = name
-                    }
-                    
-                    self.store.saveManagedContext(onResponse: onResponse)
+                _users.forEach {
+                    $0.name = name
                 }
+                
+                self.store.saveManagedContext(onResponse: onResponse)
             }
         }
     }
@@ -106,17 +108,9 @@ extension MockUserStorageManager {
         
         // Search for both
         if let safeName = name, let safeUserId = userId {
-            predicate = NSPredicate(format: "id == %@ OR name like[c] %@", argumentArray: [safeUserId.uuidString, safeName])
-        }
-        
-        // Name only
-        if let safeName = name {
-            predicate = NSPredicate(format: "name like[c] %@", safeName)
-        }
-        
-        // userId only
-        if let safeUserId = userId {
-            predicate = NSPredicate(format: "id == %@", safeUserId.uuidString)
+            predicate = NSPredicate(format: "id == %@ AND name like[c] %@", argumentArray: [safeUserId.uuidString, safeName])
+        } else {
+            predicate = NSPredicate(format: "id == %@ OR name like[c] %@", argumentArray: [userId?.uuidString ?? "", name ?? ""])
         }
         
         self.store.fetch(CD_User.self, filter: predicate) { (users, error) in
