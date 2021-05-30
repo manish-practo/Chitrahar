@@ -109,8 +109,16 @@ extension MockUserStorageManager {
         // Search for both
         if let safeName = name, let safeUserId = userId {
             predicate = NSPredicate(format: "id == %@ AND name like[c] %@", argumentArray: [safeUserId.uuidString, safeName])
-        } else {
-            predicate = NSPredicate(format: "id == %@ OR name like[c] %@", argumentArray: [userId?.uuidString ?? "", name ?? ""])
+        }
+        
+        // Name only
+        if let safeName = name {
+            predicate = NSPredicate(format: "name like[c] %@", safeName)
+        }
+        
+        // userId only
+        if let safeUserId = userId {
+            predicate = NSPredicate(format: "%K == %@", "id", safeUserId as CVarArg)
         }
         
         self.store.fetch(CD_User.self, filter: predicate) { (users, error) in

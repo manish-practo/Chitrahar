@@ -84,6 +84,46 @@ extension StorageCoreTests {
         XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.nameCanNotBeEmpty)
     }
     
+    func test_createUser_duplicate_failiure() {
+        // First create - Success
+        var _status = false
+        var _error: Error? = nil
+        
+        let exp = expectation(description: "createUserExpectation")
+        
+        self.sut.create(self.defaultUser) { (status, error) in
+            _status = status
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertTrue(_status)
+        XCTAssertNil(_error)
+        
+        // Duplicate create
+        var _dStatus = false
+        var _dError: Error? = nil
+        
+        let dExp = expectation(description: "createUserFailedExpectation")
+        
+        self.sut.create(self.defaultUser) { (status, error) in
+            _dStatus = status
+            _dError = error
+            
+            dExp.fulfill()
+        }
+        
+        wait(for: [dExp], timeout: self.expectationTimeout)
+        
+        XCTAssertFalse(_dStatus)
+        XCTAssertNotNil(_dError)
+        XCTAssertEqual(_dError as? MockUserStorageError, MockUserStorageError.idAlreadyExists)
+        
+    }
+    
 }
 
 extension StorageCoreTests {
