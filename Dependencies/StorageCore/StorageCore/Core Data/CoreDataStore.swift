@@ -15,10 +15,14 @@ open class CoreDataStore: CoreDataConfigProvider {
     private(set) public var containerName: String
     private(set) public var bundle: Bundle
     private(set) public var isConfigured: Bool = false
+    private(set) public var isInMemoryStore = false
     
-    public init(containerName: String, bundle: Bundle) {
+    public init(containerName: String,
+                bundle: Bundle,
+                isInMemoryStore: Bool = false) {
         self.containerName = containerName
         self.bundle = bundle
+        self.isInMemoryStore = isInMemoryStore
     }
     
     open func configureSetups(onResponse: @escaping (Error?) -> Void) {
@@ -41,6 +45,14 @@ open class CoreDataStore: CoreDataConfigProvider {
         }
         
         let container = NSPersistentContainer(name: persistentContainerName, managedObjectModel: managedObjectModel)
+        
+        if self.isInMemoryStore {
+            let description = NSPersistentStoreDescription()
+            description.type = NSInMemoryStoreType
+            
+            container.persistentStoreDescriptions = [description]
+        }
+        
         container.loadPersistentStores { (storeDescription, error) in
             self.persistentContainer = container
             

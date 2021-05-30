@@ -7,11 +7,17 @@
 
 import Foundation
 
-enum MockUserStorageError: Error {
+enum MockUserStorageError: Int, Error {
     case nameCanNotBeEmpty
     case invalidName
     case nameAlreadyExists
     case idAlreadyExists
     case idDoesNotExist
     case invalidId
+}
+
+extension MockUserStorageError: Equatable {
+    
+    static func == (lhs: Self, rhs: Self) -> Bool { lhs.rawValue == rhs.rawValue }
+    
 }

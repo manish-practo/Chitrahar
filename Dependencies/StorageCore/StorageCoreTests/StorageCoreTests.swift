@@ -10,7 +10,7 @@ import XCTest
 
 class StorageCoreTests: XCTestCase {
 
-    private var store: CoreDataStore!
+    private var store: MockCoreDataStore!
     private var sut: MockUserStorageManager!
     private var defaultUser: User!
     
@@ -21,7 +21,7 @@ class StorageCoreTests: XCTestCase {
     override func setUp() {
         let configExp = expectation(description: "storeConfigureSetupsExpectation")
         
-        self.store = CoreDataStore(containerName: self.xcModelName, bundle: currentBundle)
+        self.store = MockCoreDataStore(containerName: self.xcModelName, bundle: currentBundle, isInMemoryStore: true)
         self.store.configureSetups {(error) in
             assert(error == nil, error.debugDescription)
             
@@ -37,6 +37,7 @@ class StorageCoreTests: XCTestCase {
     override func tearDown() {
         self.store = nil
         self.sut = nil
+        self.defaultUser = nil
     }
 
 }
@@ -50,7 +51,7 @@ extension StorageCoreTests {
         
         let exp = expectation(description: "createUserExpectation")
         
-        sut.create(self.defaultUser) { (status, error) in
+        self.sut.create(self.defaultUser) { (status, error) in
             _status = status
             _error = error
             
@@ -61,6 +62,26 @@ extension StorageCoreTests {
         
         XCTAssertTrue(_status)
         XCTAssertNil(_error)
+    }
+    
+    func test_createUser_withoutName_failiure() {
+        var _status = false
+        var _error: Error? = nil
+        
+        let exp = expectation(description: "createUserFailedExpectation")
+        
+        self.sut.create(User(id: UUID(), name: "")) { (status, error) in
+            _status = status
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertFalse(_status)
+        XCTAssertNotNil(_error)
+        XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.nameCanNotBeEmpty)
     }
     
 }

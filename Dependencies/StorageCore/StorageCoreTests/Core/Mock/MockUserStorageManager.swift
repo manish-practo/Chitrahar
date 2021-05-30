@@ -114,7 +114,7 @@ extension MockUserStorageManager {
         }
         
         self.store.fetch(CD_User.self, filter: predicate) { (users, error) in
-            onResponse(users?.isEmpty ?? false)
+            onResponse(!(users?.isEmpty ?? true))
         }
     }
     
