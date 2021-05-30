@@ -84,6 +84,26 @@ extension StorageCoreTests {
         XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.nameCanNotBeEmpty)
     }
     
+    func test_createUser_invalidName_failiure() {
+        var _status = false
+        var _error: Error? = nil
+        
+        let exp = expectation(description: "createUserFailedExpectation")
+        
+        self.sut.create(User(id: UUID(), name: "AB")) { (status, error) in
+            _status = status
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertFalse(_status)
+        XCTAssertNotNil(_error)
+        XCTAssertEqual(_error as? MockUserStorageError, MockUserStorageError.invalidName)
+    }
+    
     func test_createUser_duplicate_failiure() {
         // First create - Success
         var _status = false
@@ -129,14 +149,14 @@ extension StorageCoreTests {
 extension StorageCoreTests {
     
     func test_fetchUsers_success() {
+        // First create - Success
+        var _status = false
+        var _error: Error? = nil
         
-        var _users: [CD_User]?
-        var _error: Error?
+        let exp = expectation(description: "createUserExpectation")
         
-        let exp = expectation(description: "fetchUserExpectation")
-        
-        self.sut.fetchUsers { (users, error) in
-            _users = users
+        self.sut.create(self.defaultUser) { (status, error) in
+            _status = status
             _error = error
             
             exp.fulfill()
@@ -144,8 +164,32 @@ extension StorageCoreTests {
         
         wait(for: [exp], timeout: self.expectationTimeout)
         
-        XCTAssertNotNil(_users)
+        XCTAssertTrue(_status)
         XCTAssertNil(_error)
+        
+        // Fetch users test
+        var _fUsers: [CD_User]?
+        var _fError: Error?
+        
+        let fExp = expectation(description: "fetchUserExpectation")
+        
+        self.sut.fetchUsers { (users, error) in
+            _fUsers = users
+            _fError = error
+            
+            fExp.fulfill()
+        }
+        
+        wait(for: [fExp], timeout: self.expectationTimeout)
+        
+        XCTAssertNotNil(_fUsers)
+        XCTAssertEqual(_fUsers?.count, 1)
+        
+        let createdUser = _fUsers?.first
+        XCTAssertEqual(createdUser?.id, self.defaultUser.id)
+        XCTAssertEqual(createdUser?.name, self.defaultUser.name)
+        
+        XCTAssertNil(_fError)
         
     }
     
