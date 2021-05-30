@@ -193,4 +193,25 @@ extension StorageCoreTests {
         
     }
     
+    func test_fetchUsers_failiure() {
+        var _users: [CD_User]?
+        var _error: Error?
+        
+        let exp = expectation(description: "fetchUserFailiureExpectation")
+        
+        self.sut.fetchUsers { (users, error) in
+            _users = users
+            _error = error
+            
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: self.expectationTimeout)
+        
+        XCTAssertNotNil(_users)
+        XCTAssertEqual(_users?.count, 0)
+        
+        XCTAssertNil(_error)
+    }
+    
 }
