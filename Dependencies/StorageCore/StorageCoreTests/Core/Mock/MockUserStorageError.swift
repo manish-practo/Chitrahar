@@ -10,6 +10,7 @@ import Foundation
 enum MockUserStorageError: Error {
     case nameCanNotBeEmpty
     case invalidName
+    case nameAlreadyExists
     case idAlreadyExists
     case idDoesNotExist
     case invalidId
