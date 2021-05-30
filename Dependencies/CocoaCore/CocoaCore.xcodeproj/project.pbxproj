@@ -10,6 +10,8 @@
 		A13513352663A6590047AB48 /* CollectionViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513342663A6590047AB48 /* CollectionViewCell+Dequeue.swift */; };
 		A13513392663A6780047AB48 /* CollectionViewCell+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513382663A6780047AB48 /* CollectionViewCell+Register.swift */; };
 		A13513402663A6C60047AB48 /* TestUICollectionViewCellRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135133F2663A6C60047AB48 /* TestUICollectionViewCellRegistration.swift */; };
+		A13513452663BAB70047AB48 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513442663BAB70047AB48 /* UIView+Constraints.swift */; };
+		A135134A2663C9950047AB48 /* TestUIViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513492663C9950047AB48 /* TestUIViewConstraints.swift */; };
 		A13CE3012661EC2E00F7CFE2 /* CocoaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13CE2F72661EC2E00F7CFE2 /* CocoaCore.framework */; };
 		A13CE3062661EC2E00F7CFE2 /* CocoaCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13CE3052661EC2E00F7CFE2 /* CocoaCoreTests.swift */; };
 		A13CE3082661EC2E00F7CFE2 /* CocoaCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A13CE2FA2661EC2E00F7CFE2 /* CocoaCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +34,8 @@
 		A13513342663A6590047AB48 /* CollectionViewCell+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewCell+Dequeue.swift"; sourceTree = "<group>"; };
 		A13513382663A6780047AB48 /* CollectionViewCell+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionViewCell+Register.swift"; sourceTree = "<group>"; };
 		A135133F2663A6C60047AB48 /* TestUICollectionViewCellRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUICollectionViewCellRegistration.swift; sourceTree = "<group>"; };
+		A13513442663BAB70047AB48 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		A13513492663C9950047AB48 /* TestUIViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewConstraints.swift; sourceTree = "<group>"; };
 		A13CE2F72661EC2E00F7CFE2 /* CocoaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13CE2FA2661EC2E00F7CFE2 /* CocoaCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaCore.h; sourceTree = "<group>"; };
 		A13CE2FB2661EC2E00F7CFE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +83,22 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
+		A13513432663BAA10047AB48 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A13513442663BAB70047AB48 /* UIView+Constraints.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		A13513482663C9770047AB48 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				A13513492663C9950047AB48 /* TestUIViewConstraints.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		A13CE2ED2661EC2E00F7CFE2 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +140,7 @@
 		A1524C8626637E79007D10EC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A13513432663BAA10047AB48 /* UIView */,
 				A13513332663A6140047AB48 /* UICollectionView */,
 				A1524C8726637E81007D10EC /* UITableView */,
 			);
@@ -138,6 +159,7 @@
 		A1524C9026637F54007D10EC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A13513482663C9770047AB48 /* UIView */,
 				A135133C2663A6970047AB48 /* UICollectionView */,
 				A1524C9126637F5D007D10EC /* UITableView */,
 			);
@@ -267,6 +289,7 @@
 			files = (
 				A1524C8D26637F1E007D10EC /* TableViewCell+Register.swift in Sources */,
 				A13513392663A6780047AB48 /* CollectionViewCell+Register.swift in Sources */,
+				A13513452663BAB70047AB48 /* UIView+Constraints.swift in Sources */,
 				A13513352663A6590047AB48 /* CollectionViewCell+Dequeue.swift in Sources */,
 				A1524C8926637EB6007D10EC /* TableViewCell+Dequeue.swift in Sources */,
 			);
@@ -279,6 +302,7 @@
 				A1524C9326637F7E007D10EC /* TestUITableViewCellRegistration.swift in Sources */,
 				A13CE3062661EC2E00F7CFE2 /* CocoaCoreTests.swift in Sources */,
 				A13513402663A6C60047AB48 /* TestUICollectionViewCellRegistration.swift in Sources */,
+				A135134A2663C9950047AB48 /* TestUIViewConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
