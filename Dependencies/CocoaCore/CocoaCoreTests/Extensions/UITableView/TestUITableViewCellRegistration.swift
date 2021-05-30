@@ -42,8 +42,8 @@ extension TestUITableViewCellRegistration {
         
     }
     
-    func test_cellRegistration_notRegistered_failure() {
-        
+    func test_dequeu_notRegisteredCell_failure() {
+        // TODO: Handle fatal
     }
     
 }
