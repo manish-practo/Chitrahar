@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A13513582663F68B0047AB48 /* Int+MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513572663F68B0047AB48 /* Int+MathOperationProvider.swift */; };
+		A135135D2663F6E90047AB48 /* TestIntegerMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135135C2663F6E90047AB48 /* TestIntegerMath.swift */; };
 		A1524C7426637D47007D10EC /* FoundationCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1524C6A26637D47007D10EC /* FoundationCore.framework */; };
 		A1524C7926637D47007D10EC /* FoundationCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1524C7826637D47007D10EC /* FoundationCoreTests.swift */; };
 		A1524C7B26637D48007D10EC /* FoundationCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A1524C6D26637D47007D10EC /* FoundationCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A18BD61F2665273100A67B29 /* MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD61E2665273100A67B29 /* MathOperationProvider.swift */; };
+		A18BD625266527CD00A67B29 /* Double+MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD624266527CD00A67B29 /* Double+MathOperationProvider.swift */; };
+		A18BD62B2665291B00A67B29 /* TestDoubleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +28,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A13513572663F68B0047AB48 /* Int+MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+MathOperationProvider.swift"; sourceTree = "<group>"; };
+		A135135C2663F6E90047AB48 /* TestIntegerMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntegerMath.swift; sourceTree = "<group>"; };
 		A1524C6A26637D47007D10EC /* FoundationCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1524C6D26637D47007D10EC /* FoundationCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationCore.h; sourceTree = "<group>"; };
 		A1524C6E26637D47007D10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1524C7326637D47007D10EC /* FoundationCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1524C7826637D47007D10EC /* FoundationCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationCoreTests.swift; sourceTree = "<group>"; };
 		A1524C7A26637D47007D10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A18BD61E2665273100A67B29 /* MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperationProvider.swift; sourceTree = "<group>"; };
+		A18BD624266527CD00A67B29 /* Double+MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MathOperationProvider.swift"; sourceTree = "<group>"; };
+		A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDoubleMath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A135134F2663F5E50047AB48 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A13513572663F68B0047AB48 /* Int+MathOperationProvider.swift */,
+				A18BD624266527CD00A67B29 /* Double+MathOperationProvider.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A135135B2663F6D20047AB48 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				A135135C2663F6E90047AB48 /* TestIntegerMath.swift */,
+				A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
 		A1524C6026637D47007D10EC = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +99,8 @@
 		A1524C6C26637D47007D10EC /* FoundationCore */ = {
 			isa = PBXGroup;
 			children = (
+				A18BD61D266526E100A67B29 /* Core */,
+				A135134F2663F5E50047AB48 /* Extensions */,
 				A1524C6D26637D47007D10EC /* FoundationCore.h */,
 				A1524C6E26637D47007D10EC /* Info.plist */,
 			);
@@ -80,10 +110,19 @@
 		A1524C7726637D47007D10EC /* FoundationCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				A135135B2663F6D20047AB48 /* Math */,
 				A1524C7826637D47007D10EC /* FoundationCoreTests.swift */,
 				A1524C7A26637D47007D10EC /* Info.plist */,
 			);
 			path = FoundationCoreTests;
+			sourceTree = "<group>";
+		};
+		A18BD61D266526E100A67B29 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A18BD61E2665273100A67B29 /* MathOperationProvider.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +186,7 @@
 				TargetAttributes = {
 					A1524C6926637D47007D10EC = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					A1524C7226637D47007D10EC = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18BD625266527CD00A67B29 /* Double+MathOperationProvider.swift in Sources */,
+				A18BD61F2665273100A67B29 /* MathOperationProvider.swift in Sources */,
+				A13513582663F68B0047AB48 /* Int+MathOperationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A135135D2663F6E90047AB48 /* TestIntegerMath.swift in Sources */,
+				A18BD62B2665291B00A67B29 /* TestDoubleMath.swift in Sources */,
 				A1524C7926637D47007D10EC /* FoundationCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +386,7 @@
 		A1524C7F26637D48007D10EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +402,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.FoundationCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +412,7 @@
 		A1524C8026637D48007D10EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manish.FoundationCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -387,6 +437,7 @@
 		A1524C8226637D48007D10EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoundationCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +455,7 @@
 		A1524C8326637D48007D10EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoundationCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
