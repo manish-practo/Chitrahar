@@ -1,20 +1,20 @@
 //
-//  TestDoubleMath.swift
+//  TestIntegerMathOperationProvider.swift
 //  FoundationCoreTests
 //
-//  Created by Manish Pandey on 31/05/21.
+//  Created by Manish Pandey on 30/05/21.
 //
 
 import Foundation
 import XCTest
 @testable import FoundationCore
 
-class TestDoubleMath: XCTestCase {
+class TestIntegerMathOperationProvider: XCTestCase {
     
-    private var sut: Double!
+    private var sut: Int!
     
     override func setUp() {
-        self.sut = Double()
+        self.sut = Int()
     }
     
     override func tearDown() {
@@ -23,7 +23,7 @@ class TestDoubleMath: XCTestCase {
     
 }
 
-extension TestDoubleMath {
+extension TestIntegerMathOperationProvider {
     
     func test_mathHalfOperation_success() {
         self.sut = 2
@@ -43,7 +43,7 @@ extension TestDoubleMath {
     
 }
 
-extension TestDoubleMath {
+extension TestIntegerMathOperationProvider {
     
     func test_mathDoubleOperation_success() {
         self.sut = 4

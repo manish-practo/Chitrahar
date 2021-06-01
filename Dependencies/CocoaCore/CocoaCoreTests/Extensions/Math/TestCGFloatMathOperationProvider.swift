@@ -1,20 +1,20 @@
 //
-//  TestIntegerMath.swift
-//  FoundationCoreTests
+//  TestCGFloatMathOperationProvider.swift
+//  CocoaCoreTests
 //
-//  Created by Manish Pandey on 30/05/21.
+//  Created by Manish Pandey on 01/06/21.
 //
 
 import Foundation
 import XCTest
 @testable import FoundationCore
 
-class TestIntegerMath: XCTestCase {
+class TestCGFloatMathOperationProvider: XCTestCase {
     
-    private var sut: Int!
+    private var sut: CGFloat!
     
     override func setUp() {
-        self.sut = Int()
+        self.sut = CGFloat()
     }
     
     override func tearDown() {
@@ -23,7 +23,7 @@ class TestIntegerMath: XCTestCase {
     
 }
 
-extension TestIntegerMath {
+extension TestCGFloatMathOperationProvider {
     
     func test_mathHalfOperation_success() {
         self.sut = 2
@@ -43,7 +43,7 @@ extension TestIntegerMath {
     
 }
 
-extension TestIntegerMath {
+extension TestCGFloatMathOperationProvider {
     
     func test_mathDoubleOperation_success() {
         self.sut = 4

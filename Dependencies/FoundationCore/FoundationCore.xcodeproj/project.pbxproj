@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A13513582663F68B0047AB48 /* Int+MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13513572663F68B0047AB48 /* Int+MathOperationProvider.swift */; };
-		A135135D2663F6E90047AB48 /* TestIntegerMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135135C2663F6E90047AB48 /* TestIntegerMath.swift */; };
+		A135135D2663F6E90047AB48 /* TestIntegerMathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135135C2663F6E90047AB48 /* TestIntegerMathOperationProvider.swift */; };
 		A1524C7426637D47007D10EC /* FoundationCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1524C6A26637D47007D10EC /* FoundationCore.framework */; };
 		A1524C7926637D47007D10EC /* FoundationCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1524C7826637D47007D10EC /* FoundationCoreTests.swift */; };
 		A1524C7B26637D48007D10EC /* FoundationCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A1524C6D26637D47007D10EC /* FoundationCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A18BD61F2665273100A67B29 /* MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD61E2665273100A67B29 /* MathOperationProvider.swift */; };
 		A18BD625266527CD00A67B29 /* Double+MathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD624266527CD00A67B29 /* Double+MathOperationProvider.swift */; };
-		A18BD62B2665291B00A67B29 /* TestDoubleMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */; };
+		A18BD62B2665291B00A67B29 /* TestDoubleMathOperationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BD62A2665291B00A67B29 /* TestDoubleMathOperationProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		A13513572663F68B0047AB48 /* Int+MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+MathOperationProvider.swift"; sourceTree = "<group>"; };
-		A135135C2663F6E90047AB48 /* TestIntegerMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntegerMath.swift; sourceTree = "<group>"; };
+		A135135C2663F6E90047AB48 /* TestIntegerMathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIntegerMathOperationProvider.swift; sourceTree = "<group>"; };
 		A1524C6A26637D47007D10EC /* FoundationCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1524C6D26637D47007D10EC /* FoundationCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationCore.h; sourceTree = "<group>"; };
 		A1524C6E26637D47007D10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		A1524C7A26637D47007D10EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A18BD61E2665273100A67B29 /* MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperationProvider.swift; sourceTree = "<group>"; };
 		A18BD624266527CD00A67B29 /* Double+MathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MathOperationProvider.swift"; sourceTree = "<group>"; };
-		A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDoubleMath.swift; sourceTree = "<group>"; };
+		A18BD62A2665291B00A67B29 /* TestDoubleMathOperationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDoubleMathOperationProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +72,8 @@
 		A135135B2663F6D20047AB48 /* Math */ = {
 			isa = PBXGroup;
 			children = (
-				A135135C2663F6E90047AB48 /* TestIntegerMath.swift */,
-				A18BD62A2665291B00A67B29 /* TestDoubleMath.swift */,
+				A135135C2663F6E90047AB48 /* TestIntegerMathOperationProvider.swift */,
+				A18BD62A2665291B00A67B29 /* TestDoubleMathOperationProvider.swift */,
 			);
 			path = Math;
 			sourceTree = "<group>";
@@ -244,8 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A135135D2663F6E90047AB48 /* TestIntegerMath.swift in Sources */,
-				A18BD62B2665291B00A67B29 /* TestDoubleMath.swift in Sources */,
+				A135135D2663F6E90047AB48 /* TestIntegerMathOperationProvider.swift in Sources */,
+				A18BD62B2665291B00A67B29 /* TestDoubleMathOperationProvider.swift in Sources */,
 				A1524C7926637D47007D10EC /* FoundationCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
